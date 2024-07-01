@@ -1,0 +1,81 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color: rgb(52, 142, 99);
+  text-align: center;
+}
+
+.game-board{
+  padding: 2rem 3.5rem;
+  width: 42%;
+  background-color: rgb(22, 82, 53);
+  margin: auto;
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+.card{
+  width: 20%;
+  height: 7rem;
+  background-color: rgb(248, 161, 111);
+  color: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3.5rem;
+  cursor: pointer;
+  animation: close 0.5s 1;
+  border-radius: 1rem;
+}
+
+.active{
+  background-color: white;
+  color: black;
+  animation: flip 0.5s 1;
+}
+
+button{
+  width: 9rem;
+  height: 3.5rem;
+  font-size: 1.3rem;
+  font-weight: 500;
+  border-radius: 0.5rem;
+  border: none;
+  cursor: pointer;
+  margin-top: 1.2rem;
+}
+
+button:hover{
+  opacity: 85%;
+}
+
+@keyframes flip{
+  0%{
+    transform: rotateY(0deg);
+  }
+  50%{
+    transform: rotateY(90deg);
+  }
+  100%{
+    transform: rotateY(0deg);
+  }
+}
+
+@keyframes close{
+  0%{
+    transform: rotateY(0deg);
+  }
+  50%{
+    transform: rotateY(-90deg);
+  }
+  100%{
+    transform: rotateY(0deg);
+  }
+}
